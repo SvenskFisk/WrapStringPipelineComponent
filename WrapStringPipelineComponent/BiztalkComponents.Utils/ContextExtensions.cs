@@ -1,5 +1,5 @@
-﻿using System;
-using Microsoft.BizTalk.Message.Interop;
+﻿using Microsoft.BizTalk.Message.Interop;
+using System;
 
 namespace BizTalkComponents.Utils
 {

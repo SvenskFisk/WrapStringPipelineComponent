@@ -1,17 +1,10 @@
 namespace BizTalkComponents.PipelineComponents.WrapStringPipelineComponent.PipelineComponents
 {
-    using System;
-    using System.Resources;
-    using System.Drawing;
-    using System.Collections;
-    using System.Reflection;
-    using System.ComponentModel;
-    using System.Text;
-    using System.IO;
-    using Microsoft.BizTalk.Message.Interop;
-    using Microsoft.BizTalk.Component.Interop;
-    using System.Collections.Generic;
     using BizTalkComponents.Utils;
+    using Microsoft.BizTalk.Component.Interop;
+    using System;
+    using System.Collections;
+    using System.ComponentModel;
 
     [ComponentCategory(CategoryTypes.CATID_PipelineComponent)]
     [ComponentCategory(CategoryTypes.CATID_Any)]

@@ -1,9 +1,8 @@
-﻿using System;
+﻿using BizTalkComponents.PipelineComponents.WrapStringPipelineComponent.PipelineComponents;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Winterdom.BizTalk.PipelineTesting;
 using System.IO;
 using System.Text;
-using BizTalkComponents.PipelineComponents.WrapStringPipelineComponent.PipelineComponents;
+using Winterdom.BizTalk.PipelineTesting;
 
 namespace UnitTests
 {

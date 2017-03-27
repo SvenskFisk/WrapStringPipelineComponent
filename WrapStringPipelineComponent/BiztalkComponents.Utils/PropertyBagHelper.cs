@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Microsoft.BizTalk.Component.Interop;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Microsoft.BizTalk.Component.Interop;
 
 namespace BizTalkComponents.Utils
 {
