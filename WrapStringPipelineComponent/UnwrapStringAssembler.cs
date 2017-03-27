@@ -11,6 +11,7 @@ namespace BizTalkComponents.PipelineComponents.WrapStringPipelineComponent.Pipel
     using Microsoft.BizTalk.Message.Interop;
     using Microsoft.BizTalk.Component.Interop;
     using System.Collections.Generic;
+    using System.Xml;
 
     public partial class UnwrapStringAssembler : IAssemblerComponent
     {
@@ -22,8 +23,11 @@ namespace BizTalkComponents.PipelineComponents.WrapStringPipelineComponent.Pipel
         public void AddDocument(IPipelineContext pContext, IBaseMessage pInMsg)
         {
             var inStream = pInMsg.BodyPart.GetOriginalDataStream();
-            var encoding = Encoding.GetEncoding(pInMsg.BodyPart.Charset ?? "utf-8");
-            var outStream = new UnwrapperStream(inStream, "<string><![CDATA[", "]]></string>", encoding);
+            var encoding = Encoding.GetEncoding(string.IsNullOrWhiteSpace(EncodingName) ? "utf-8" : EncodingName);
+
+            var doc = new XmlDocument();
+            doc.Load(inStream);
+            var outStream = new MemoryStream(encoding.GetBytes(doc.LastChild.InnerText));
 
             pInMsg.BodyPart.Data = outStream;
             pContext.ResourceTracker.AddResource(outStream);

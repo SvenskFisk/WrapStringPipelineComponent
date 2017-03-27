@@ -63,8 +63,6 @@
   <ItemGroup>
     <Compile Include="UnwrapStringAssemblerTest.cs" />
     <Compile Include="WrapStringDisassemblerTest.cs" />
-    <Compile Include="UnwrapperStreamTest.cs" />
-    <Compile Include="WrapperStreamTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
